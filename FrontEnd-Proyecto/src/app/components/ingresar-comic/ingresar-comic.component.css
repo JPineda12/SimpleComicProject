@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Arial;
+    padding: 50px;
+}
+
+.comic {
+    margin: 20px auto;
+    width: 500px;
+}
+
+.comic-screen {
+    background-color: #3498DB;
+    padding: 20px;
+    border-radius: 5px
+}
+
+.app-title {
+    text-align: center;
+    color: rgb(209, 214, 216);
+}
+
+
+
+
+
+.comic-field {
+    width: 250px;
+}
+
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+.btn {
+    border: 2px solid transparent;
+    background: #52616b;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.msg {
+    color: 	#dddddd;
+    text-shadow: 0 2px 2px #000;
+    text-align:center;
+}
+
+
+.error {
+    color: rgb(252, 38, 38);
+    
+}
+
+.btn:hover {
+    background-color: #7cadce;
+}
+
+.comic-input{
+    width: 100%;
+    display: inline-block;
+}
+
+.ladoizq{
+    float:left;
+}
+
+
+.ladoder{
+    float:right;
+    margin-bottom: 10px;
+}

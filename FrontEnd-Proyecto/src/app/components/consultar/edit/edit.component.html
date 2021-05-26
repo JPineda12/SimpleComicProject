@@ -1,0 +1,48 @@
+<body>
+    <div class="comic">
+        <div class="comic-screen">
+            <div class="app-title">
+                <h1>Editar Comic</h1>
+                <h3 class="error">{{errorMessage}}</h3>
+            </div>
+            <div class="comic-form">
+                <div class="comic-input">
+                    <div class="ladoizq">
+                        <h4 class="subtitle">Nombre</h4>
+                    </div>
+                    <div class="ladoder"><input type="text" class="comic-field" value="" id="name"></div>
+                </div>
+                <div class="comic-input">
+                    <div class="ladoizq">
+                        <h4 class="subtitle">Año de impresión</h4>
+                    </div>
+                    <div class="ladoder">
+                        <select [(ngModel)]="selectedYear" name="years" id="years" class="comic-field" (change)="selectedYear">
+                            <option [ngValue]="y" *ngFor="let y of years">{{y.year}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="comic-input">
+                    <div class="ladoizq">
+                        <h4 class="subtitle">Sinopsis</h4>
+                    </div>
+                    <div class="ladoder"><input type="text" class="comic-field" value="" id="sinopsis"></div>
+                </div>
+
+                <div class="comic-input">
+                    <div class="ladoizq">
+                        <h4 class="subtitle">Editorial</h4>
+                    </div>
+                    <div class="ladoder">
+                        <select [(ngModel)]="selectedEditorial" name="editorial" id="editorial" class="comic-field">
+                            <option [ngValue]="ed" *ngFor="let ed of Editoriales">{{ed.nombre}}</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="msg">{{resMessage}}</h3>
+                <a class="btn btn-primary btn-large btn-block" (click)="grabar()">Editar Comic</a>
+                <a class="btn btn-primary btn-large btn-block" href="/consultar">Volver</a>
+            </div>
+        </div>
+    </div>
+</body>

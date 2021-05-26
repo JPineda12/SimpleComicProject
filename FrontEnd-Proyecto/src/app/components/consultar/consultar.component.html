@@ -1,0 +1,39 @@
+<body>
+    <div class="comic">
+        <div class="comic-screen">
+            <div class="app-title">
+                <h1 class='deepshadow'>Consultar Comics</h1>
+            </div>
+            <div class="comic-form">
+                <div class="table-container">
+                    <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Editorial</th>
+                                <th class="text-left">Nombre</th>
+                                <th class="text-left">Sinopsis</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr *ngFor="let comic of Comics">
+                                <td class="text-left" id="img"><img [src]="comic.imagen" class="imagen"></td>
+                                <td class="text-center" id="nombre">{{comic.nombre}}<br>Año de Impresion: {{comic.year}}
+                                </td>
+                                <td class="text-left" id="sinop">
+                                    <div class="sinopsis">
+                                    <div class="descripcion">{{comic.sinopsis}}</div>
+                                    <div class="botones" ><button class="btn" (click)="editar(comic)" *ngIf="comic.isUsuario == true"><i
+                                                class="bi bi-pencil-fill"></i></button>
+                                        <button class="btn" (click)="eliminar(comic)" *ngIf="comic.isUsuario"> <i class="bi bi-trash-fill"></i></button>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn2" [routerLink]="'/home'"><i class="bi bi-arrow-left"></i> Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

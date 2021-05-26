@@ -1,0 +1,38 @@
+<body>
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>Registrarse</h1>
+                <p><span class ="error">{{errorMessage}}</span> </p>
+            </div>
+
+            <div class="login-form">
+                <div class="control-group">
+                    <input type="text" class="login-field" value="" placeholder="Nombre" id="name">
+                </div>
+                <div class="control-group">
+                    <input type="text" class="login-field" value="" placeholder="Usuario" id="user">
+                </div>
+                <div class="control-group">
+                    <input type="password" class="login-field" value="" placeholder="Password" id="login-pass">
+                </div>
+                <div class="control-group">
+                    <input class="login-field" id="date" type="date" id="fecha">
+                </div>
+                <div class="genero">
+                    <div class="generom">
+                    <input type="radio" class="male" id="male" name="gender" value="Masculino" class="generoi">
+                    <label for="male">Masculino</label><br>
+                    </div>
+                    <div class="generom">
+                    <input type="radio" class="female" id="female" name="gender" value="Femenino" class="generoi">
+                    <label for="female">Femenino</label><br>
+                    </div>
+                </div>
+                <a class="btn btn-primary btn-large btn-block" (click)="registrar()">Grabar Usuario</a>
+                <a class="btn btn-primary btn-large btn-block" href="/login">Volver</a>
+
+            </div>
+        </div>
+    </div>
+</body>

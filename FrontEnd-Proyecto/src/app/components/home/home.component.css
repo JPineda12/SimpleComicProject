@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Arial;
+    padding: 50px;
+}
+
+.login {
+    margin: 20px auto;
+    width: 420px;
+}
+
+.login-screen {
+    background-color: #3498DB;
+    padding: 20px;
+    border-radius: 5px
+}
+
+.app-title {
+    text-align: center;
+    color: rgb(209, 214, 216);
+}
+
+.login-form{
+    text-align:center;
+}
+
+.cartoon-button {
+    width: 85%;
+    height: 50px;
+    display: inline-block;
+    padding: 10px 45x;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: white;
+    background: #d63031;
+    transition: 0.5s all ease;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.text {
+    display: inline-block;
+    transform: skewX(15deg);
+}
+
+.cartoon-button:hover {
+    transition: 0.5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 10px 10px 0 #FBC638;
+    transform: translate(-4px, -4px) skewX(-15deg);
+}
+
+.arrow {
+    display: inline-block;
+    position: relative;
+    transition: 0.3s all ease;
+    transform: scale(1.5) skewX(20deg);
+}
+
+.cartoon-button:hover .arrow {
+    animation: 1s colorcycle infinite;
+    margin-right: 55px;
+    transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.arrow::before, .arrow::after {
+    content: '>';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    transform: translateX(-20px);
+    transition: 0.3s all ease;
+}
+
+.cartoon-button:hover .arrow::before {
+    animation: 1s colorcycle 0.1s infinite;
+    transform: translateX(0px);
+    transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.arrow::after {
+    left: 40px;
+    transform: translateX(-40px);
+}
+
+.cartoon-button:hover .arrow::after {
+    animation: 1s colorcycle 0.2s infinite;
+    transform: translateX(0px);
+    transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes colorcycle {
+    0% {
+        color: white;
+    }
+    25% {
+        color: #FBC638;
+    }
+    50% {
+        color: white;
+    }
+}
